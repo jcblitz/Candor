@@ -1,0 +1,37 @@
+<%= form_for(@interview_session) do |f| %>
+  <% if @interview_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@interview_session.errors.count, "error") %> prohibited this interview_session from being saved:</h2>
+
+      <ul>
+      <% @interview_session.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.text_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.text_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :panel_type %><br />
+    <%= f.text_field :panel_type %>
+  </div>
+  <div class="field">
+    <%= f.label :candidate_id %><br />
+    <%= f.text_field :candidate_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

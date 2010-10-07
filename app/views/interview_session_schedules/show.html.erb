@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Interview session:</b>
+  <%= @interview_session_schedule.interview_session_id %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @interview_session_schedule.employee_id %>
+</p>
+
+<p>
+  <b>Accepted:</b>
+  <%= @interview_session_schedule.accepted %>
+</p>
+
+
+<%= link_to 'Edit', edit_interview_session_schedule_path(@interview_session_schedule) %> |
+<%= link_to 'Back', interview_session_schedules_path %>

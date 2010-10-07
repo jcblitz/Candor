@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start time:</b>
+  <%= @interview_session.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @interview_session.end_time %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @interview_session.location %>
+</p>
+
+<p>
+  <b>Panel type:</b>
+  <%= @interview_session.panel_type %>
+</p>
+
+<p>
+  <b>Candidate:</b>
+  <%= @interview_session.candidate.candidate_name%>
+</p>
+
+
+<%= link_to 'Edit', edit_interview_session_path(@interview_session) %> |
+<%= link_to 'Back', interview_sessions_path %>

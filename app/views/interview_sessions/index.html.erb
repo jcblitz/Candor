@@ -1,0 +1,31 @@
+<h1>Listing interview_sessions</h1>
+
+<table>
+  <tr>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Location</th>
+    <th>Panel type</th>
+    <th>Candidate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @interview_sessions.each do |interview_session| %>
+  <tr>
+    <td><%= interview_session.start_time %></td>
+    <td><%= interview_session.end_time %></td>
+    <td><%= interview_session.location %></td>
+    <td><%= interview_session.panel_type %></td>
+    <td><%= interview_session.candidate_id %></td>
+    <td><%= link_to 'Show', interview_session %></td>
+    <td><%= link_to 'Edit', edit_interview_session_path(interview_session) %></td>
+    <td><%= link_to 'Destroy', interview_session, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interview session', new_interview_session_path %>

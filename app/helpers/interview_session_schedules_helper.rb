@@ -1,0 +1,2 @@
+module InterviewSessionSchedulesHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing interview_session_schedules</h1>
+
+<table>
+  <tr>
+    <th>Interview session</th>
+    <th>Employee</th>
+    <th>Accepted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @interview_session_schedules.each do |interview_session_schedule| %>
+  <tr>
+    <td><%= interview_session_schedule.interview_session_id %></td>
+    <td><%= interview_session_schedule.employee_id %></td>
+    <td><%= interview_session_schedule.accepted %></td>
+    <td><%= link_to 'Show', interview_session_schedule %></td>
+    <td><%= link_to 'Edit', edit_interview_session_schedule_path(interview_session_schedule) %></td>
+    <td><%= link_to 'Destroy', interview_session_schedule, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interview session schedule', new_interview_session_schedule_path %>

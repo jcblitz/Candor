@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start_time: 
+  end_time: 
+  location: MyString
+  panel_type: MyString
+  candidate_id: 1
+
+two:
+  start_time: 
+  end_time: 
+  location: MyString
+  panel_type: MyString
+  candidate_id: 1

@@ -10,6 +10,15 @@
   <%= @employee.position %>
 </p>
 
+<h3>Interviews</h3>
+
+<ol>
+<% @employee.interview_sessions.each do |is|%>
+    <li>
+        <%= is.start_time%>
+    </li>
+<% end %>
+</ol>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

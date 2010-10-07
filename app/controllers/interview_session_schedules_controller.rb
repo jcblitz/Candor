@@ -25,6 +25,9 @@ class InterviewSessionSchedulesController < ApplicationController
   # GET /interview_session_schedules/new.xml
   def new
     @interview_session_schedule = InterviewSessionSchedule.new
+    
+    @employees = Employee.all
+    @interview_sessions = InterviewSession.all
 
     respond_to do |format|
       format.html # new.html.erb

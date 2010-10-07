@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :interview_session_id %><br />
-    <%= f.text_field :interview_session_id %>
+    <%= select ("interview_session_schedule", "interview_session_id", @interview_sessions.map {|u| [u.start_time,u.id]}) %>
   </div>
   <div class="field">
-    <%= f.label :employee_id %><br />
-    <%= f.text_field :employee_id %>
+    <%= f.label :employee_id %><br />    
+    <%= select ("interview_session_schedule", "employee_id", @employees.map {|u| [u.employee_name,u.id]}) %>
   </div>
   <div class="field">
     <%= f.label :accepted %><br />

@@ -1,30 +1,16 @@
-<h1><%=Candidate.find(1).candidate_name%></h1>
+<h1><%=@candidate.candidate_name%></h1>
 <h2><%=Position.find(1).position_name%></h2>
 
 <h3>Agenda</h3>
 
-<h4>Technical Panel</h4>
-
-<p>Time: 10:00 AM</p>
-<p>Location: Fairmount Park</p>
-<ol>
-    <li>Jared Blitzstein - SSE3 </li>
-    <li>Michael McLauglin - SSE4</li>
-    <li>Surabhi Vibhuti - TM</li>
-</ol>
-
-<h4>Manager</h4>
-<p>Time: 10:30 AM</p>
-<p>Location: Devang's Office</p>
-
-<ol>
-    <li>Dennis Driscoll</li>
-</ol>
-
-<h4>Manager</h4>
-<p>Time: 11:00 AM</p>
-<p>Location: Dennis's Office</p>
-
-<ol>
-    <li>Devang Patel</li>
-</ol>
+<% @candidate.interview_sessions.each do |interview_session| %>
+    <h4><%= interview_session.panel_type%></h4>
+    <p><%= interview_session.start_time.strftime("%I:%M %p")%> - <%= interview_session.end_time.strftime("%I:%M %p")%></p>
+    <p>Location: <%= interview_session.location %></p>
+    
+    <ul>
+    <%interview_session.employees.each do |employee|%>
+        <li><%= employee.employee_name%> - <%= employee.position%></li>
+    <% end %>
+    </ul>
+<% end %>

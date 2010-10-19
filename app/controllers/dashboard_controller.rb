@@ -1,6 +1,8 @@
 class DashboardController < ApplicationController
+  before_filter :authenticate_user!
+  
   def index
-    @employee = Employee.find(1)
+    @employee = current_user.employee
     
   end
 end

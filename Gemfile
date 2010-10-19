@@ -16,7 +16,8 @@ gem 'spork'
 gem 'launchy'
 gem 'pickle'
 gem 'factory_girl'
-gem 'authlogic'
+#gem 'authlogic'
+gem "devise"
 
 # Use unicorn as the web server
 # gem 'unicorn'

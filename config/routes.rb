@@ -1,4 +1,6 @@
 Candor::Application.routes.draw do
+  devise_for :users
+
   resources :interview_session_schedules
 
   resources :interview_sessions

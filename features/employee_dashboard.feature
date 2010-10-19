@@ -4,9 +4,13 @@ Feature: Manage dashboards
   I want a landing page where I can see personalized information
   
   Scenario: View dashboard page
-  Given an employee exists with employee_name: "Jared Blitzstein", id: 1
+  #Given a user exists with email: "test@test.com", password: "123456", id: 1
+  And an employee exists with employee_name: "Jared Blitzstein", id: 1, user_id: 1
   When I am on the dashboard page
-  Then I should see "Hello Jared"
+  #And I fill in "user_email" with "test@test.com" 
+  #And I fill in "user_password" with "123456"
+  #And I press "user_submit"
+  Then I should see "Hello Jared Blitzstein"
 
   # Rails generates Delete links that use Javascript to pop up a confirmation
   # dialog and then do a HTTP POST request (emulated DELETE request).
